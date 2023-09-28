@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:wght@100;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *,
 *::before,
 *::after {
@@ -45,11 +47,16 @@ body {
   position: relative;
   width: 80%;
   max-width: 900px;
-  margin: 20px auto;
-  padding-top: 10px;
+  margin: 20px auto 20px auto;
   z-index: 2;
   filter: drop-shadow(0px 0px 10px #d184b5);
   display: block;
+}
+@media (max-width: 900px) {
+  .header__title {
+    width: 90%;
+    margin: 20px auto 20px;
+  }
 }
 .header__prettyPic {
   z-index: 1;
@@ -60,7 +67,7 @@ body {
 }
 @media (max-width: 900px) {
   .header__prettyPic {
-    opacity: 0.3;
+    display: none;
   }
 }
 .header .pic-Yu {
@@ -93,6 +100,53 @@ body {
 
 [class$=_container] {
   max-width: 1280px;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.listik__container {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .listik__container {
+    padding: 30px 30px 0px;
+  }
+}
+.listik__list {
+  -moz-column-count: auto;
+       column-count: auto;
+  -moz-column-width: clamp(270px, 28vw, 500px);
+       column-width: clamp(270px, 28vw, 500px);
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  counter-reset: day_counter;
+  font-size: 23px;
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 500;
+}
+.listik__list span {
+  font-style: italic;
+}
+.listik li {
+  color: #333;
+}
+.listik li:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+.listik li:before {
+  counter-increment: day_counter;
+  content: counter(day_counter) ". ";
+  font-size: 1.2em;
+  font-family: "Croissant One", cursive;
+  font-weight: 600;
+  color: hotpink;
+}
+.listik li.rest {
+  color: rgb(255, 74, 108);
+}
+.listik li.rest::before {
+  color: rgb(255, 74, 108);
+  text-shadow: none;
 }
