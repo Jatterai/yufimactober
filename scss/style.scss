@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
+
+body {
+	background: radial-gradient(ellipse at center, #e0e9f0 0%, #fee6da 31%, #ffd5d9 76%, #f8d5eb 100%);
+	width: 100%;
+	min-height: 100vh;
+	font-family: "Roboto";
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	& > * {
+		flex: 1 0 auto;
+	}
+}
+
+[class$="_container"] {
+	max-width: 1280px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
