@@ -1,4 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  letter-spacing: 1;
+}
+
+.header {
+  position: relative;
+}
+.header__title {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding-top: 10px;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 10px #d184b5);
+  display: block;
+}
+.header__prettyPic {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  display: block;
+}
+@media (max-width: 900px) {
+  .header__prettyPic {
+    opacity: 0.3;
+  }
+}
+.header .pic-Yu {
+  right: 0;
+}
+
 body {
   background: radial-gradient(ellipse at center, #e0e9f0 0%, #fee6da 31%, #ffd5d9 76%, #f8d5eb 100%);
   width: 100%;
@@ -11,6 +79,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main {

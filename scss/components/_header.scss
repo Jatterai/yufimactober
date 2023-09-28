@@ -1,0 +1,29 @@
+.header {
+	position: relative;
+
+	&__title {
+		position: relative;
+		width: 80%;
+		max-width: 900px;
+		margin: 20px auto;
+		padding-top: 10px;
+		z-index: 2;
+		filter: drop-shadow(0px 0px 10px #d184b5);
+		display: block;
+		//backdrop-filter: blur(10px);
+	}
+	&__prettyPic {
+		z-index: 1;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		display: block;
+		@media (max-width: 900px) {
+			opacity: 0.3;
+		}
+	}
+
+	.pic-Yu {
+		right: 0;
+	}
+}

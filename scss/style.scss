@@ -1,3 +1,4 @@
+@import "./includes/_null.scss", "./components/header";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
 
 body {
@@ -12,6 +13,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
 .main {
