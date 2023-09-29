@@ -1,6 +1,6 @@
 const dayToday = new Date().getDate();
 
-if (new Date().getMonth() == 8) {
+if (new Date().getMonth() == 9) {
 	const list = document.querySelector(`.listik__list li:nth-child(${dayToday})`);
 	list.classList.add('today')
 
