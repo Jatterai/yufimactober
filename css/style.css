@@ -122,7 +122,7 @@ body {
   -moz-column-gap: 1em;
        column-gap: 1em;
   counter-reset: day_counter;
-  font-size: 23px;
+  font-size: 1.4rem;
   font-family: "Balsamiq Sans", cursive;
   font-weight: 500;
 }
@@ -130,23 +130,53 @@ body {
   font-style: italic;
 }
 .listik li {
+  overflow: visible;
   color: #333;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.listik li:not(:last-child) {
-  margin-bottom: 0.4em;
+.listik li.today {
+  text-shadow: 0px 0px 5px rgba(255, 255, 0, 0.377);
+}
+.listik li.today::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  right: -10%;
+  top: -30%;
+  background: url("../assets/img/whiskers1.svg") top left/auto 100% no-repeat, url("../assets/img/whiskers2.svg") top right/auto 100% no-repeat, url("../assets/img/underline.svg") top 128% right 0px/100% auto no-repeat;
 }
 .listik li:before {
   counter-increment: day_counter;
   content: counter(day_counter) ". ";
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-family: "Croissant One", cursive;
   font-weight: 600;
-  color: hotpink;
+  color: rgb(255, 74, 108);
+  margin-right: 0.3em;
+  position: relative;
+  top: -0.2em;
+  text-shadow: -1px 0 0 rgb(255, 132, 0), 1px 0 0 blue;
 }
 .listik li.rest {
-  color: rgb(255, 74, 108);
+  color: hotpink;
 }
 .listik li.rest::before {
-  color: rgb(255, 74, 108);
+  color: hotpink;
+  text-shadow: none;
+}
+.listik li:not(:last-child) {
+  margin-bottom: 0.7em;
+}
+.listik li.done {
+  color: grey;
+}
+.listik li.done::before {
+  color: grey;
   text-shadow: none;
 }
