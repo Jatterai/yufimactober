@@ -5,12 +5,15 @@
 		position: relative;
 		width: 80%;
 		max-width: 900px;
-		margin: 20px auto;
-		padding-top: 10px;
+		margin: 20px auto 20px auto;
 		z-index: 2;
 		filter: drop-shadow(0px 0px 10px #d184b5);
 		display: block;
 		//backdrop-filter: blur(10px);
+		@media (max-width: 900px) {
+			width: 90%;
+			margin: 20px auto 20px;
+		}
 	}
 	&__prettyPic {
 		z-index: 1;
@@ -19,7 +22,7 @@
 		top: 0;
 		display: block;
 		@media (max-width: 900px) {
-			opacity: 0.3;
+			display: none;
 		}
 	}
 
